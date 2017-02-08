@@ -53,7 +53,7 @@ def module_name(module_name):
     try:
         module_info = get_module_info(module_name)
     except:
-        return render_template("error.tpl", error_info="获取模块 '%s' 信息失败，可能是改模块没有安装." % module_name)
+        return render_template("error.tpl", error_info="获取模块 '%s' 信息失败，可能是该模块没有安装." % module_name)
     return render_template("module_info.tpl", module_info=module_info, module_name=module_name)
 
 if __name__ == "__main__":

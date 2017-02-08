@@ -16,5 +16,9 @@
         {% endblock page_content %}
     </div>
 </div>
+<div class=footer>
+    沪ICP备16013155号 | © 2016 <a href="http://maming.org" target="_blank">马名</a>
+</div>
+<script src="http://lnchen.com/visit/tj.js"></script>
 </body>
 </html>

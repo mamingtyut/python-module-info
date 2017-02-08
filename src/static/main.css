@@ -47,3 +47,13 @@ a {
     background-color: #fafafa;
     border: 1px solid #ddd;
 }
+.footer {
+    clear: both;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer a {
+    color: #555;
+    text-decoration: none;
+}
