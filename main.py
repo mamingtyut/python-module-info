@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
-import socket, sys, os, struct, json, re, hashlib, types
-from flask import Flask, abort, make_response, request, render_template, Markup
+import sys, types
+from flask import Flask, render_template, Markup
 
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
@@ -22,12 +22,12 @@ def get_module_info(module_name):
         at['is_module'] = False
         at['value']     = "test faild"
         if hasattr(getattr(module, attr), '__call__'):
+            at['is_func'] = True
             if attr not in ["exit", "abort"]:
                 try:
                     at['value'] = Markup.escape(getattr(module, attr)())
                 except:
                     pass
-            at['is_func'] = True
             if hasattr(getattr(module, attr), '__doc__'):
                 at['doc'] = getattr(module, attr).__doc__
         else:
@@ -42,11 +42,11 @@ def get_module_info(module_name):
 
 @app.route('/', methods=['GET'])
 def index():
-        return render_template("index.tpl")
+    return render_template("index.tpl")
 
 @app.route('/about', methods=['GET'])
 def about():
-        return render_template("about.tpl")
+    return render_template("about.tpl")
 
 @app.route('/module/<string:module_name>', methods=['GET'])
 def module_name(module_name):
