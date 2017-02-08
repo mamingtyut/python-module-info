@@ -57,4 +57,4 @@ def module_name(module_name):
     return render_template("module_info.tpl", module_info=module_info, module_name=module_name)
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=8003)
