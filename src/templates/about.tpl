@@ -7,15 +7,14 @@
 <br>
 [说明]<br>
 其原理是使用dir获取模块的所有属性, 然后使用__doc__获取函数的帮助<br>
-然后尝试获取属性的值, 当然执行结果是依据当前web应用所在的服务器环境决定<br>
-如果获取属性值失败, 会在'test value'列将显示'test faild'<br>
+然后尝试获取属性和函数的返回值, 当然执行结果是依据当前web应用所在的服务器环境决定<br>
+如果获取属性值或者执行函数失败, 会在'test value'列将显示'test faild'<br>
 
 <br>
 [源码]<br>
 该应用使用python-flask + nginx-uwsgi驱动, 源码在<a href="https://github.com/mamingtyut/python-module-info" target="_blank">这里</a><br>
 <br>
 欢迎拍砖...
-
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="about" data-title="关于" data-url="http://pym.maming.org/about"></div>
 <!-- 多说评论框 end -->

@@ -17,3 +17,7 @@
 该应用使用python-flask + nginx-uwsgi驱动, 源码在这里
 
 欢迎拍砖...
+
+[演示]
+
+在线演示 [http://pym.maming.org/](http://pym.maming.org/)
