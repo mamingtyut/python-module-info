@@ -20,17 +20,13 @@ def get_module_info(module_name):
         at['doc']       = ""
         at['is_func']   = False
         at['is_module'] = False
-        at['value']     = "test faild"
+        at['value']     = ""
         if hasattr(getattr(module, attr), '__call__'):
             at['is_func'] = True
-            if attr not in ["exit", "abort"]:
-                try:
-                    at['value'] = Markup.escape(getattr(module, attr)())
-                except:
-                    pass
             if hasattr(getattr(module, attr), '__doc__'):
                 at['doc'] = getattr(module, attr).__doc__
         else:
+            at['value'] = "test faild"
             try:
                 at['value'] = Markup.escape(getattr(module, attr))
             except:
